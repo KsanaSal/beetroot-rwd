@@ -1,0 +1,14 @@
+:root {
+    --gray-dark-color: #323232;
+    --gray-medium-color: #565656;
+    --gray-normal-color: #7b7b7b;
+    --gray-semilight-color: #cccccc;
+    --gray-light-color: #f4f4f4;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --error-color: #e10000;
+}
+
+$bp-mobile: 320px;
+$bp-tablet: 768px;
+$bp-desktop: 1440px;
