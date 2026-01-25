@@ -1,0 +1,9 @@
+@use "../utils/variables" as *;
+
+.section {
+    padding: 0;
+
+    @media screen and (min-width: $bp-desktop) {
+        padding: 20px 0;
+    }
+}
