@@ -1,0 +1,45 @@
+@use "../utils/variables" as *;
+
+.hero {
+    padding-top: 70px;
+    background-image: url("../../images/hero/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+
+    @media screen and (min-width: $bp-tablet) {
+        padding-top: 30px;
+        height: 320px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        padding-top: 100px;
+        height: 600px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        display: none;
+    }
+
+    &__text {
+        font-size: 30px;
+        color: var(--dark-color);
+        line-height: 1.6;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 36px;
+            line-height: 1.4;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 48px;
+            line-height: 1.3;
+        }
+    }
+}
