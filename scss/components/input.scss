@@ -11,17 +11,10 @@
         color: var(--gray-normal-color);
         font-size: 12px;
     }
-
-    // &:is-active {
-    //     width: 178px;
-    //     opacity: 1;
-    //     pointer-events: auto;
-    // }
 }
 
 .is-active .input {
     width: 178px;
-
     padding: 4px;
     border-bottom: 1px solid var(--dark-color);
     opacity: 1;
