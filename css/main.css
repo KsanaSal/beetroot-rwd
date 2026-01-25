@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --gray-dark-color: #323232;
   --gray-medium-color: #565656;
@@ -88,13 +89,13 @@ body {
 }
 
 .input {
-  width: 178px;
+  width: 0;
+  opacity: 0;
   height: 30px;
-  padding: 4px 4px;
-  border-bottom: 1px solid var(--dark-color);
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  padding: 0;
+  border: none;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 .input::-moz-placeholder {
   color: var(--gray-normal-color);
@@ -103,6 +104,14 @@ body {
 .input::placeholder {
   color: var(--gray-normal-color);
   font-size: 12px;
+}
+
+.is-active .input {
+  width: 178px;
+  padding: 4px;
+  border-bottom: 1px solid var(--dark-color);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .section {
@@ -151,6 +160,10 @@ body {
   width: 34px;
   height: 22px;
 }
+.header__close {
+  width: 30px;
+  height: 30px;
+}
 .header__nav {
   display: flex;
   align-items: center;
@@ -194,6 +207,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -215,18 +229,31 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .header__burger, .header__close {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .header__close {
+    opacity: 1;
+    transform: scale(0.8);
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+  }
   .burger-btn {
     background: transparent;
     border: none;
     cursor: pointer;
     z-index: 20;
+    position: relative;
   }
   .mobile-menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100vh;
-    width: 260px;
+    width: 100vw;
     background: var(--gray-light-color);
     padding: 100px 30px;
     list-style: none;
@@ -267,10 +294,15 @@ body {
 }
 
 /* Burger animation */
-.burger-btn svg {
-  transition: transform 0.3s;
+.burger-btn .header__close {
+  display: none;
 }
 
-.burger-btn.is-active svg {
-  transform: rotate(90deg);
+/* Коли меню відкрите */
+.burger-btn.is-active .header__burger {
+  display: none;
+}
+
+.burger-btn.is-active .header__close {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

@@ -7,7 +7,7 @@ if (burgerBtn && mobileMenu && overlay) {
         burgerBtn.classList.toggle("is-active");
         mobileMenu.classList.toggle("is-open");
         overlay.classList.toggle("is-active");
-        document.body.classList.toggle("no-scroll"); // блокуємо скрол при відкритому меню
+        document.body.classList.toggle("no-scroll");
     }
 
     burgerBtn.addEventListener("click", toggleMenu);

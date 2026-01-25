@@ -1,11 +1,11 @@
 .input {
-  width: 178px;
+  width: 0;
+  opacity: 0;
   height: 30px;
-  padding: 4px 4px;
-  border-bottom: 1px solid var(--dark-color);
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  padding: 0;
+  border: none;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 .input::-moz-placeholder {
   color: var(--gray-normal-color);
@@ -14,4 +14,12 @@
 .input::placeholder {
   color: var(--gray-normal-color);
   font-size: 12px;
+}
+
+.is-active .input {
+  width: 178px;
+  padding: 4px;
+  border-bottom: 1px solid var(--dark-color);
+  opacity: 1;
+  pointer-events: auto;
 }/*# sourceMappingURL=input.css.map */

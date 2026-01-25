@@ -14,10 +14,15 @@
 }
 
 /* Burger animation */
-.burger-btn svg {
-    transition: transform 0.3s;
+.burger-btn .header__close {
+    display: none;
 }
 
-.burger-btn.is-active svg {
-    transform: rotate(90deg);
+/* Коли меню відкрите */
+.burger-btn.is-active .header__burger {
+    display: none;
+}
+
+.burger-btn.is-active .header__close {
+    display: block;
 }
