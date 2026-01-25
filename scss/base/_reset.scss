@@ -27,6 +27,7 @@ img {
 
 a {
     display: inline-block;
+    text-decoration: none;
 }
 
 address {
@@ -41,4 +42,6 @@ ul {
 
 button {
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 }

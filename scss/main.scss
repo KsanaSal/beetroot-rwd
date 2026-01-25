@@ -2,3 +2,11 @@
 @use "./utils/fonts";
 
 @use "./base/reset";
+@use "./base/base";
+
+@use "./components/input";
+
+@use "./layouts/section";
+@use "./layouts/container";
+@use "./layouts/header";
+@use "./layouts/overlay";

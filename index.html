@@ -13,27 +13,66 @@
         <title>Beetroot RWD</title>
     </head>
     <body>
-        <header>
-            <a href="#">logo</a>
-            <nav>
-                <a href="#">home</a>
-                <a href="#">about</a>
-                <a href="#">works</a>
-                <a href="#">blog</a>
-                <a href="#">contact</a>
-            </nav>
-            <input type="search" />
-            <div>
-                <input type="search" />
-                <button>menu</button>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">works</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
+        <header class="header section">
+            <div class="container header__container">
+                <a href="#">
+                    <svg class="header__logo">
+                        <use href="./images/icons.svg#icon-logo"></use>
+                    </svg>
+                </a>
+                <div class="header__nav">
+                    <nav>
+                        <a href="#">home</a>
+                        <a href="#">about</a>
+                        <a href="#">works</a>
+                        <a href="#">blog</a>
+                        <a href="#">contact</a>
+                    </nav>
+                    <div class="header__search-container js-search">
+                        <input
+                            class="input js-search-input"
+                            type="search"
+                            placeholder="Search"
+                        />
+                        <svg class="header__search js-search-btn">
+                            <use href="./images/icons.svg#icon-search"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="header__mobile--top">
+                        <div class="header__search-container js-search">
+                            <input
+                                class="input js-search-input"
+                                type="search"
+                                placeholder="Search"
+                            />
+                            <svg class="header__search js-search-btn">
+                                <use
+                                    href="./images/icons.svg#icon-search"
+                                ></use>
+                            </svg>
+                        </div>
+                        <button class="burger-btn">
+                            <svg class="header__burger">
+                                <use
+                                    href="./images/icons.svg#icon-burger"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-menu">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">works</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
+        <div class="overlay"></div>
+        <script src="js/burger.js"></script>
+        <script src="js/search.js"></script>
     </body>
 </html>
