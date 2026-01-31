@@ -7,6 +7,10 @@ document.querySelectorAll(".js-search").forEach((search) => {
 
         search.classList.toggle("is-active");
     });
+
+    search.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
 });
 
 document.addEventListener("click", () => {
