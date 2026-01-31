@@ -531,4 +531,145 @@ body {
 }
 .blog__icon:hover {
   fill: currentColor;
+}
+
+.posts {
+  padding-top: 70px;
+}
+@media screen and (min-width: 1440px) {
+  .posts {
+    padding-top: 90px;
+  }
+}
+.posts__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .posts__container {
+    gap: 50px;
+  }
+}
+.posts__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .posts__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.posts__header--title {
+  font-size: 28px;
+  line-height: 1.3;
+  color: var(--dark-color);
+}
+.posts__header--link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--gray-normal-color);
+}
+.posts__header--link:hover, .posts__header--link:focus {
+  color: var(--dark-color);
+}
+.posts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media screen and (min-width: 768px) {
+  .posts__list {
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .posts__list {
+    flex-direction: row;
+  }
+}
+.posts__card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+@media screen and (min-width: 768px) {
+  .posts__card {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .posts__card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .posts__card {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .posts__card:nth-child(even) {
+    flex-direction: column;
+  }
+}
+.posts__card--image {
+  width: 300px;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .posts__card--image {
+    width: 340px;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .posts__card--image {
+    width: 370px;
+    height: 260px;
+  }
+}
+.posts__card--content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.posts__card--description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray-normal-color);
+}
+@media screen and (min-width: 768px) {
+  .posts__card--description {
+    font-size: 12px;
+  }
+}
+.posts__card--subtitle {
+  line-height: 1.3;
+  font-weight: 400;
+}
+.posts__card--info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 768px) {
+  .posts__card--info {
+    letter-spacing: 1.2px;
+  }
+}
+.posts__card--title {
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--dark-color);
+}
+.posts__card--text {
+  line-height: 1.5;
+  color: var(--gray-medium-color);
 }/*# sourceMappingURL=main.css.map */
