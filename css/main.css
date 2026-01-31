@@ -404,6 +404,14 @@ body {
   flex-direction: column;
   gap: 50px;
 }
+@media screen and (min-width: 1440px) {
+  .blog__list .blog__card:nth-child(odd) {
+    align-self: flex-start;
+  }
+  .blog__list .blog__card:nth-child(even) {
+    align-self: flex-end;
+  }
+}
 .blog__card {
   display: flex;
   flex-direction: column;
@@ -414,16 +422,26 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    height: 280px;
   }
   .blog__card:first-child {
     flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .blog__card {
+    gap: 30px;
   }
 }
 .blog__card--content {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .blog__card--content {
+    width: 450px;
+    height: 300px;
+  }
 }
 .blog__card--info {
   display: flex;
@@ -438,11 +456,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-@media screen and (min-width: 768px) {
-  .blog__card-description {
-    gap: 15px;
-  }
 }
 .blog__card--title {
   font-size: 22px;
@@ -468,17 +481,6 @@ body {
     line-height: 1.4;
   }
 }
-.blog__card--span {
-  display: inline-block;
-}
-@media screen and (min-width: 768px) {
-  .blog__card--span {
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* кількість рядків */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-}
 .blog__card--link {
   margin-left: 10px;
   display: inline-flex;
@@ -495,13 +497,13 @@ body {
   transition: 0.3s ease;
   white-space: nowrap;
 }
-.blog__card--link:hover .blog__card--link-text {
+.blog__card--link:hover, :focus .blog__card--link-text {
   opacity: 1;
   transform: translateX(0);
   display: inline-block;
   color: var(--dark-color);
 }
-.blog__card--link:hover {
+.blog__card--link:hover, .blog__card--link:focus {
   color: var(--dark-color);
 }
 .blog__card--image {
@@ -514,6 +516,12 @@ body {
   .blog__card--image {
     width: 340px;
     height: 280px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .blog__card--image {
+    width: 570px;
+    height: 470px;
   }
 }
 .blog__icon {
