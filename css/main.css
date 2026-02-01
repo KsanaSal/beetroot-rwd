@@ -102,6 +102,14 @@ body {
   font-weight: 400;
   line-height: 2;
 }
+body main {
+  padding-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  body main {
+    padding-top: 100px;
+  }
+}
 
 .input {
   width: 0;
@@ -168,7 +176,10 @@ body {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   padding: 20px 0;
+  background-color: var(--light-color);
 }
 @media screen and (min-width: 1440px) {
   .header {
@@ -511,7 +522,7 @@ body {
   transition: 0.3s ease;
   white-space: nowrap;
 }
-.blog__card--link:hover, :focus .blog__card--link-text {
+.blog__card--link:hover .blog__card--link-text, .blog__card--link:focus .blog__card--link-text {
   opacity: 1;
   transform: translateX(0);
   display: inline-block;
@@ -918,7 +929,7 @@ body {
   transition: 0.3s ease;
   white-space: nowrap;
 }
-.info__header--link:hover, :focus .info__header--link-text {
+.info__header--link:hover .info__header--link-text, .info__header--link:focus .info__header--link-text {
   opacity: 1;
   transform: translateX(0);
   display: flex;

@@ -1,7 +1,10 @@
 @use "../utils/variables" as *;
 
 .header {
+    position: fixed;
+    width: 100%;
     padding: 20px 0;
+    background-color: var(--light-color);
 
     @media screen and (min-width: $bp-desktop) {
         padding: 40px 0;

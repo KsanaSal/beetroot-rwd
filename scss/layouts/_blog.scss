@@ -125,8 +125,8 @@
             white-space: nowrap;
         }
 
-        &--link:hover,
-        :focus &--link-text {
+        &--link:hover &--link-text,
+        &--link:focus &--link-text {
             opacity: 1;
             transform: translateX(0);
             display: inline-block;
