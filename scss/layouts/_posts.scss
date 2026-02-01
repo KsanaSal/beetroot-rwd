@@ -45,6 +45,11 @@
                 color: var(--dark-color);
             }
         }
+
+        &--icon {
+            width: 23px;
+            height: 17px;
+        }
     }
 
     &__list {

@@ -590,6 +590,10 @@ body {
 .posts__header--link:hover, .posts__header--link:focus {
   color: var(--dark-color);
 }
+.posts__header--icon {
+  width: 23px;
+  height: 17px;
+}
 .posts__list {
   display: flex;
   flex-direction: column;
@@ -843,5 +847,114 @@ body {
 @media screen and (min-width: 768px) {
   .popular__card--text span {
     display: none;
+  }
+}
+
+.info {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+@media screen and (min-width: 1440px) {
+  .info {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+.info__container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+@media screen and (min-width: 768px) {
+  .info__container {
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .info__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.info__header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .info__header {
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .info__header {
+    width: 470px;
+  }
+}
+.info__header--title {
+  font-size: 24px;
+  color: var(--dark-color);
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+@media screen and (min-width: 768px) {
+  .info__header--title {
+    font-size: 23px;
+  }
+}
+.info__header--link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-normal-color);
+}
+.info__header--link-text {
+  font-size: 16px;
+  line-height: 1.3;
+  display: none;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+.info__header--link:hover, :focus .info__header--link-text {
+  opacity: 1;
+  transform: translateX(0);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-color);
+}
+.info__header--link:hover, .info__header--link:focus {
+  color: var(--dark-color);
+}
+.info__header--icon {
+  width: 23px;
+  height: 17px;
+  fill: currentColor;
+}
+.info__header--icon:hover {
+  fill: currentColor;
+}
+.info__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 1.3px;
+  color: var(--gray-medium-color);
+}
+@media screen and (min-width: 768px) {
+  .info__content {
+    text-align: end;
+    letter-spacing: 1.5px;
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .info__content {
+    text-align: start;
+    width: 470px;
   }
 }/*# sourceMappingURL=main.css.map */
