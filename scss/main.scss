@@ -5,6 +5,7 @@
 @use "./base/base";
 
 @use "./components/input";
+@use "./components/button";
 
 @use "./layouts/section";
 @use "./layouts/container";
@@ -13,3 +14,4 @@
 @use "./layouts/hero";
 @use "./layouts/blog";
 @use "./layouts/posts";
+@use "./layouts/popular";
